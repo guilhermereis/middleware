@@ -1,0 +1,60 @@
+1. Paciente                 OK   -  CPF OU NADA
+	cpf 
+    nome 
+	data_nascimento
+	sexo 
+    telefones
+
+2. Enfermaria               OK   -  ID OU NADA
+	id_enfermaria
+	qtd_leitos
+	leitos_ocupados
+
+3. FichaClinica				OK   -  ID OU NADA
+	id_ficha_clinica
+    grau
+    status
+
+4. Medico					OK   -  CRM OU NADA
+	cpf 
+    nome 
+	data_nascimento
+	sexo 
+    telefones
+	crm
+	ativo
+	supervisor
+	foto (ImageIcon)
+
+5. ServidorGeral			OK   -  MATRICULA NADA
+	cpf 
+    nome 
+	data_nascimento
+	sexo 
+    telefones
+    matricula
+    ativo
+
+6. Acompanhante				OK   -  NOME OU NADA
+	cpf 
+    nome 
+	data_nascimento
+	sexo 
+    telefones
+    vinculo_afetivo
+    cpf_paciente
+
+7. FichaAtendimento			OK - NADA
+	data_hora_entrada 
+	servidor 
+	paciente 
+	id_ficha_clinica 
+
+8. Consulta					OK - NADA
+	data_entrada 
+	data_alta 
+	previsao_alta 
+	diagnostico 
+	paciente 
+	medico 
+	enfermaria 
