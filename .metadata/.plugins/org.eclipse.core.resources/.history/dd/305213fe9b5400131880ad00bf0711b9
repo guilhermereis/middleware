@@ -1,7 +1,6 @@
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
 
@@ -11,7 +10,6 @@ public class ClientRequestHandler {
 	private static Socket socket;
 	
 	public static byte[] sendObj(byte[] obj) throws IOException{
-		socket = new Socket("localhost",2000);
 		sendBytes(obj, 0, obj.length);
 		return (readBytes());
 	}

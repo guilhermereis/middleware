@@ -6,9 +6,9 @@ import java.io.OutputStream;
 import java.net.Socket;
 
 
-public class ClientRequestHandler {
+public class ServerRequestHandler {
 	
-	private static Socket socket;
+	private static ServerSocket socket;
 	
 	public static byte[] sendObj(byte[] obj) throws IOException{
 		socket = new Socket("localhost",2000);
@@ -43,5 +43,5 @@ public class ClientRequestHandler {
 	    
 	    return data;
 	}
-	
+
 }
