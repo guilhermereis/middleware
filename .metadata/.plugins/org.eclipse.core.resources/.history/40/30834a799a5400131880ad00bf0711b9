@@ -1,0 +1,26 @@
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.net.Socket;
+
+
+public class ClientRequestHandler {
+	
+	private Socket socket;
+	
+	public ClientRequestHandler(){
+		
+	}
+
+	public void sendBytes(byte[] myByteArray, int start, int len) throws IOException {
+		
+	    OutputStream out = socket.getOutputStream(); 
+	    DataOutputStream dos = new DataOutputStream(out);
+
+	    dos.writeInt(len);
+	    if (len > 0) {
+	        dos.write(myByteArray, start, len);
+	    }
+	}
+	
+}
