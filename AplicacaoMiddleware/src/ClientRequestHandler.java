@@ -13,7 +13,9 @@ public class ClientRequestHandler {
 	public static byte[] sendObj(byte[] obj) throws IOException{
 		socket = new Socket("localhost",2000);
 		sendBytes(obj, 0, obj.length);
-		return (readBytes());
+		//return (readBytes());
+		byte[] a = new byte[10];
+		return(a);
 	}
 
 	private static void sendBytes(byte[] obj, int start, int len) throws IOException {
@@ -26,6 +28,8 @@ public class ClientRequestHandler {
 	    if (len > 0) {
 	        dos.write(obj, start, len);
 	    }
+	    
+	    socket.close();
 	    
 	}
 	
